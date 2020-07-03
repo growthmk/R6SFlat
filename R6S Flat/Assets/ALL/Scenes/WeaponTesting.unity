@@ -128,11 +128,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 749750499, guid: 3691a0d5a7f38554a86cafdaa203b546, type: 3}
+      propertyPath: STATS.magSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 797739787764410780, guid: 3691a0d5a7f38554a86cafdaa203b546,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1626463971}
+      objectReference: {fileID: 1442878332}
     - target: {fileID: 1922453875656661724, guid: 3691a0d5a7f38554a86cafdaa203b546,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,6 +259,7 @@ MonoBehaviour:
     reloadSpeed: 2
     reloadSpeed_timer: 0
     fullAuto: 1
+    cameraShakeDuration: 0
   reloading: 0
 --- !u!4 &622839355
 Transform:
@@ -1543,76 +1548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 596129960}
   speed: 0.5
---- !u!1 &1535638999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1535639001}
-  - component: {fileID: 1535639000}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1535639000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535638999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d172dc2d6ed75f4eb6852fd61d3a49d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  STATS:
-    ID: P90
-    ammoType: SMG
-    bulletLR: {fileID: 7949188872892974311, guid: 4bd11124692a34249acab1b23ad5d261,
-      type: 3}
-    muzzleFlash: {fileID: 6542132049811868978, guid: ad9c0c1131a86da42b4e387c1dca6c25,
-      type: 3}
-    bulletColor: {r: 0, g: 0, b: 0, a: 0}
-    barrelEnd: {fileID: 0}
-    damage: 10
-    accuracyOffset: 0.02
-    fireRate: 3
-    distance: 99
-    hitLayers:
-      serializedVersion: 2
-      m_Bits: 1048832
-    damageLayers:
-      serializedVersion: 2
-      m_Bits: 1048576
-    fireRate_timer: 0
-    magSize: 30
-    magSize_counter: 30
-    reloadSpeed: 2
-    reloadSpeed_timer: 0
-    fullAuto: 1
-  reloading: 0
---- !u!4 &1535639001
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535638999}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23928311, y: -5.542853, z: -155.55553}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1626463971
+--- !u!43 &1442878332
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1775,6 +1711,76 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1535638999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535639001}
+  - component: {fileID: 1535639000}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1535639000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535638999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d172dc2d6ed75f4eb6852fd61d3a49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  STATS:
+    ID: P90
+    ammoType: SMG
+    bulletLR: {fileID: 7949188872892974311, guid: 4bd11124692a34249acab1b23ad5d261,
+      type: 3}
+    muzzleFlash: {fileID: 6542132049811868978, guid: ad9c0c1131a86da42b4e387c1dca6c25,
+      type: 3}
+    bulletColor: {r: 0, g: 0, b: 0, a: 0}
+    barrelEnd: {fileID: 0}
+    damage: 10
+    accuracyOffset: 0.02
+    fireRate: 3
+    distance: 99
+    hitLayers:
+      serializedVersion: 2
+      m_Bits: 1048832
+    damageLayers:
+      serializedVersion: 2
+      m_Bits: 1048576
+    fireRate_timer: 0
+    magSize: 30
+    magSize_counter: 30
+    reloadSpeed: 2
+    reloadSpeed_timer: 0
+    fullAuto: 1
+    cameraShakeDuration: 0
+  reloading: 0
+--- !u!4 &1535639001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535638999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23928311, y: -5.542853, z: -155.55553}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713310312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1829,6 +1835,7 @@ MonoBehaviour:
     reloadSpeed: 2
     reloadSpeed_timer: 0
     fullAuto: 1
+    cameraShakeDuration: 0
   reloading: 0
 --- !u!4 &1713310314
 Transform:
@@ -1844,3 +1851,165 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2115616304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 749750497, guid: 3691a0d5a7f38554a86cafdaa203b546,
+    type: 3}
+  m_PrefabInstance: {fileID: 596129959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2115616307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115616304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d172dc2d6ed75f4eb6852fd61d3a49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  STATS:
+    ID: AK-47
+    ammoType: Rifle
+    bulletLR: {fileID: 7949188872892974311, guid: 4bd11124692a34249acab1b23ad5d261,
+      type: 3}
+    muzzleFlash: {fileID: 6542132049811868978, guid: ad9c0c1131a86da42b4e387c1dca6c25,
+      type: 3}
+    bulletColor: {r: 0, g: 0, b: 0, a: 0}
+    barrelEnd: {fileID: 0}
+    damage: 10
+    accuracyOffset: 0.02
+    fireRate: 3
+    distance: 99
+    hitLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    damageLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    fireRate_timer: 0
+    magSize: 30
+    magSize_counter: 30
+    reloadSpeed: 2
+    reloadSpeed_timer: 2
+    fullAuto: 1
+    cameraShakeDuration: 0
+  reloading: 0
+--- !u!114 &2115616308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115616304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d172dc2d6ed75f4eb6852fd61d3a49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  STATS:
+    ID: COLT
+    ammoType: Pistol
+    bulletLR: {fileID: 7949188872892974311, guid: 4bd11124692a34249acab1b23ad5d261,
+      type: 3}
+    muzzleFlash: {fileID: 6542132049811868978, guid: ad9c0c1131a86da42b4e387c1dca6c25,
+      type: 3}
+    bulletColor: {r: 0, g: 0, b: 0, a: 0}
+    barrelEnd: {fileID: 0}
+    damage: 7
+    accuracyOffset: 0.03
+    fireRate: 4
+    distance: 99
+    hitLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    damageLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    fireRate_timer: 0
+    magSize: 5
+    magSize_counter: 5
+    reloadSpeed: 3
+    reloadSpeed_timer: 3
+    fullAuto: 1
+    cameraShakeDuration: 0
+  reloading: 0
+--- !u!114 &2115616309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115616304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d172dc2d6ed75f4eb6852fd61d3a49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  STATS:
+    ID: DESERT_EAGLE
+    ammoType: Pistol
+    bulletLR: {fileID: 7949188872892974311, guid: 4bd11124692a34249acab1b23ad5d261,
+      type: 3}
+    muzzleFlash: {fileID: 6542132049811868978, guid: ad9c0c1131a86da42b4e387c1dca6c25,
+      type: 3}
+    bulletColor: {r: 0, g: 0, b: 0, a: 0}
+    barrelEnd: {fileID: 0}
+    damage: 7
+    accuracyOffset: 0.05
+    fireRate: 3
+    distance: 99
+    hitLayers:
+      serializedVersion: 2
+      m_Bits: 272
+    damageLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    fireRate_timer: 0
+    magSize: 7
+    magSize_counter: 7
+    reloadSpeed: 2
+    reloadSpeed_timer: 2
+    fullAuto: 1
+    cameraShakeDuration: 0
+  reloading: 0
+--- !u!114 &2115616310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115616304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d172dc2d6ed75f4eb6852fd61d3a49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  STATS:
+    ID: M134
+    ammoType: MG
+    bulletLR: {fileID: 7949188872892974311, guid: 4bd11124692a34249acab1b23ad5d261,
+      type: 3}
+    muzzleFlash: {fileID: 6542132049811868978, guid: ad9c0c1131a86da42b4e387c1dca6c25,
+      type: 3}
+    bulletColor: {r: 0, g: 0, b: 0, a: 0}
+    barrelEnd: {fileID: 0}
+    damage: 50
+    accuracyOffset: 1
+    fireRate: 7
+    distance: 99
+    hitLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    damageLayers:
+      serializedVersion: 2
+      m_Bits: 256
+    fireRate_timer: 3
+    magSize: 999
+    magSize_counter: 999
+    reloadSpeed: 10
+    reloadSpeed_timer: 10
+    fullAuto: 1
+    cameraShakeDuration: 0
+  reloading: 0
